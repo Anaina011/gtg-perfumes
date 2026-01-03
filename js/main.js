@@ -166,7 +166,7 @@ function startCountUp() {
   counters.forEach(counter => {
     const target = +counter.dataset.target;
     let current = 0;
-    const increment = Math.ceil(target / 120);
+    const increment = Math.max(1, Math.floor(target / 100)); // slower & smoother
 
     const updateCount = () => {
       current += increment;
@@ -184,7 +184,6 @@ function startCountUp() {
   hasCounted = true;
 }
 
-// Observe section
 const statsSection = document.getElementById('statsSection');
 
 const observer = new IntersectionObserver(
@@ -193,7 +192,9 @@ const observer = new IntersectionObserver(
       startCountUp();
     }
   },
-  { threshold: 1 }
+  {
+    threshold: 0.3   // ✅ FIXED
+  }
 );
 
 observer.observe(statsSection);

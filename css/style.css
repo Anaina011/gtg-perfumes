@@ -214,19 +214,121 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 40px;
+  }
+
+  .badge {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .stats {
+    gap: 32px;
+  }
+
+  .stat strong {
+    font-size: 56px;
+  }
+
+  .stat span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 24px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; /* IMPORTANT */
+  }
+
+  .stat strong {
+    font-size: 40px;
+  }
+
+  .stat span {
+    font-size: 14px;
+  }
+
+  .hero-content .btn-primary {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .stats {
+    gap: 14px;
+  }
+
+  .stat strong {
+    font-size: 32px;
+  }
+
+  .stat span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 20px 40px;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .nav-link,
+  .dropdown-toggle {
+    font-size: 14px;
+  }
+
+  .icon-btn {
+    font-size: 22px;
+  }
+
+  .btn-primary {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
+
 
 .product-section {
   padding: 100px 60px;
 }
 
-.product-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-
-/* GALLERY */
-/* GALLERY WRAPPER */
 .product-gallery {
   display: flex;
   flex-direction: column;
@@ -246,9 +348,9 @@ body {
 }
 
 .gallery-card img {
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-height: 460px;
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -307,6 +409,17 @@ body {
   border-radius: 14px;
   cursor: pointer;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .gallery-card img {
+    max-height: 360px;
+  }
 }
 
 .product-options {
@@ -599,8 +712,54 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .collection-right {
-    order: -1;
+   .collection-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .collection-right img {
+    width: 80%;
+    max-width: 320px;
+  }
+}
+
+/* ===============================
+   MOBILE SIZE ADJUSTMENTS
+================================ */
+@media (max-width: 600px) {
+
+  /* Section padding */
+  .collection-section {
+    padding: 48px 20px;
+  }
+
+  /* Heading */
+  .collection-left h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  /* Accordion header */
+  .accordion-header {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  /* Plus / minus icon */
+  .icon {
+    font-size: 20px;
+  }
+
+  /* Accordion content */
+  .accordion-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  /* Reduce box spacing */
+  .accordion-item {
+    margin-bottom: 12px;
   }
 }
 
@@ -644,6 +803,10 @@ body {
   }
 }
 
+/* ===============================
+   COMPARISON SECTION
+================================ */
+
 .comparison-section {
   padding: 80px 180px;
   text-align: center;
@@ -663,6 +826,10 @@ body {
 .table-wrapper {
   overflow-x: auto;
 }
+
+/* ===============================
+   TABLE
+================================ */
 
 .comparison-table {
   width: 100%;
@@ -686,7 +853,10 @@ body {
   color: #666;
 }
 
-/* HEADER IMAGES */
+/* ===============================
+   HEADER IMAGES
+================================ */
+
 .comparison-table th img {
   width: 68px;
   height: 68px;
@@ -696,14 +866,20 @@ body {
   margin: 0 auto 8px;
 }
 
-/* GTG COLUMN HIGHLIGHT */
+/* ===============================
+   GTG COLUMN HIGHLIGHT
+================================ */
+
 .comparison-table .highlight {
   background: #f1fbf6;
   color: #032E15;
   font-weight: 600;
 }
 
-/* ICON COLORS */
+/* ===============================
+   ICON STYLES
+================================ */
+
 .bi-check-circle-fill {
   color: #032E15;
   font-size: 28px;
@@ -720,11 +896,9 @@ body {
   font-weight: lighter;
 }
 
-/* CTA BUTTON */
-.center-btn {
-  margin: 40px auto 0;
-  display: inline-block;
-}
+/* ===============================
+   HEADERS
+================================ */
 
 .qualities-head {
   text-align: left;
@@ -745,6 +919,68 @@ body {
 }
 
 /* ===============================
+   CTA BUTTON
+================================ */
+
+.center-btn {
+  margin: 40px auto 0;
+  display: inline-block;
+}
+
+/* ===============================
+   RESPONSIVE ADJUSTMENTS
+================================ */
+
+/* Large tablets & small laptops */
+@media (max-width: 1200px) {
+  .comparison-section {
+    padding: 70px 120px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .comparison-section {
+    padding: 60px 80px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 50px 40px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+
+  .comparison-table th img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .comparison-section {
+    padding: 40px 20px;
+  }
+
+  .comparison-title {
+    font-size: 28px;
+  }
+
+  /* Keep table scrollable but readable */
+  .comparison-table {
+    min-width: 720px;
+  }
+}
+
+
+/* ===============================
    FOOTER
 ================================ */
 
@@ -753,6 +989,8 @@ body {
   color: #ffffff;
   padding: 80px 120px;
   font-family: 'Inter', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* STACK LOGO + CONTENT */
@@ -762,14 +1000,14 @@ body {
   gap: 48px;
 }
 
-/* LOGO ROW */
+/* LOGO */
 .footer-brand h2 {
   font-size: 36px;
   font-weight: 700;
   margin: 0;
 }
 
-/* SECOND ROW: MAIN CONTENT */
+/* MAIN CONTENT */
 .footer-content {
   display: grid;
   grid-template-columns: 1.6fr 1fr 2.6fr;
@@ -867,7 +1105,7 @@ body {
 }
 
 /* ===============================
-   RESPONSIVE
+   RESPONSIVE (unchanged)
 ================================ */
 
 @media (max-width: 1024px) {
@@ -905,5 +1143,146 @@ body {
 
   .newsletter-form button {
     width: 100%;
+  }
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+
+  /* FIX: prevent oversized 3rd column */
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  /* Newsletter spans full width */
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 24px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  /* RIGHT COLUMN WIDTH */
+  .product-options {
+    max-width: 100%;
+  }
+
+  /* HEADER */
+  .product-header h2 {
+    font-size: 22px;
+  }
+
+  .rating {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  /* SUBSCRIPTION HEADER */
+  .subscription-header {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .price del {
+    font-size: 11px;
+  }
+
+  /* CONTENT */
+  .subscription-content {
+    padding: 12px;
+  }
+
+  /* FRAGRANCE GRID → TRUE RESPONSIVE */
+  .fragrance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .fragrance-card {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .fragrance-radio {
+    font-size: 12px;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .fragrance-card img {
+    width: 44px;
+  }
+
+  .best-seller {
+    font-size: 7px;
+    padding: 2px 5px;
+  }
+
+  /* INCLUDED SECTION */
+  .included-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .included-box {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .included-box img {
+    width: 40px;
+  }
+
+  .mini-images img {
+    width: 32px;
+  }
+
+  /* BENEFITS */
+  .benefits li {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .benefits i {
+    font-size: 13px;
   }
 }

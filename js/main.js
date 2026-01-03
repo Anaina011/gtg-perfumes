@@ -198,3 +198,24 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(statsSection);
+
+
+/* ===============================
+   SCROLL ANIMATION OBSERVER
+================================ */
+const animatedElements = document.querySelectorAll('.animate');
+
+const animationObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+animatedElements.forEach(el => animationObserver.observe(el));
